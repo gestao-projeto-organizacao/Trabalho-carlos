@@ -4,18 +4,17 @@ const API_BASE_URL = 'http://127.0.0.1:8000';
 const userInfoDiv = document.getElementById('userInfo');
 const logoutBtn = document.getElementById('logoutBtn');
 
-// 1. Verificar se o usuário está logado
 const username = localStorage.getItem('currentUser');
 
 if (!username) {
     alert('Você precisa estar logado para acessar esta página.');
-    window.location.href = 'login.html'; // Redireciona para o login
+    window.location.href = 'login.html'; 
 } 
 
-// 2. Função para buscar os dados do usuário
+
 async function fetchUserInfo(username) {
     try {
-        // Usa a rota GET /usuarios/{username} que criamos
+
         const response = await fetch(`${API_BASE_URL}/usuarios/${username}`);
 
         if (response.ok) {

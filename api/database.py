@@ -2,7 +2,7 @@
 from pymongo import MongoClient
 
 
-MONGO_URI = "mongodb+srv://Empreendedorismo_DB:rpv12345@cluster0.gkjvrbx.mongodb.net/?retryWrites=true&w=majority"
+MONGO_URI = "mongodb://localhost:27017/"
 DATABASE_NAME = "trabalho_carlos_db"
 
 client = MongoClient(MONGO_URI)
